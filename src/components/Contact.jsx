@@ -29,7 +29,7 @@ const Contact = () => {
         },
         {
           name: "📧 Arcane Address",
-          value: formData.email 
+          value: formData.email
           ? `[${formData.email}](mailto:${formData.email})`
           : "No scroll address given",
           inline: true
@@ -87,52 +87,68 @@ const Contact = () => {
           Send a raven (or a message) to reach me.
         </p>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <label htmlFor="name" className="block">Your name</label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Your name"
-            className="w-full p-2 rounded bg-gray-800 text-white placeholder-gray-500 border border-purple-600"
-            required
-          />
-          <label htmlFor="email" className="block">Your email</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Your email"
-            className="w-full p-2 rounded bg-gray-800 text-white placeholder-gray-500 border border-purple-600"
-            required
-          />
-          <label htmlFor="spelltype" className="block">Spell Type</label>
-          <select
-            id="spelltype"
-            name="spelltype"
-            value={formData.spelltype}
-            onChange={handleChange}
-            className="w-full p-2 rounded bg-gray-800 text-white border border-purple-600"
-          >
-            <option value="general">✨ General Message</option>
-            <option value="request">📜 Summon Request</option>
-            <option value="bug">🐛 Report Arcane Bug</option>
-          </select> 
-          <label htmlFor="message" className="block">Your message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            maxLength={500}
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Your message"
-            className="w-full p-2 rounded bg-gray-800 text-white placeholder-gray-500 border border-purple-600"
-            required
-          ></textarea>
+          <div>
+            <label htmlFor="name" className="block text-left text-sm text-purple-300 mb-2">
+              🧙 Your Name
+            </label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your name"
+              className="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-500 border border-purple-600 focus:border-purple-400 focus:outline-none transition"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-left text-sm text-purple-300 mb-2">
+              📧 Your Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="your.email@example.com"
+              className="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-500 border border-purple-600 focus:border-purple-400 focus:outline-none transition"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="spelltype" className="block text-left text-sm text-purple-300 mb-2">
+              ✨ Spell Type
+            </label>
+            <select
+              id="spelltype"
+              name="spelltype"
+              value={formData.spelltype}
+              onChange={handleChange}
+              className="w-full p-3 rounded bg-gray-800 text-white border border-purple-600 focus:border-purple-400 focus:outline-none transition"
+            >
+              <option value="general">✨ General Message</option>
+              <option value="request">📜 Summon Request</option>
+              <option value="bug">🐛 Report Arcane Bug</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-left text-sm text-purple-300 mb-2">
+              🖋️ Your Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              maxLength={500}
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Cast your message into the void..."
+              className="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-500 border border-purple-600 focus:border-purple-400 focus:outline-none transition"
+              required
+            ></textarea>
+          </div>
           <button
             type="submit"
             disabled={cooldown}

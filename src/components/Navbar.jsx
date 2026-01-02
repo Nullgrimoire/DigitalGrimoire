@@ -17,8 +17,13 @@ const Navbar = () => {
             </HashLink>
           </li>
           <li>
+            <HashLink smooth to="/#skills" className="hover:text-white transition">
+              🧠 Skills
+            </HashLink>
+          </li>
+          <li>
             <HashLink smooth to="/#projects" className="hover:text-white transition">
-              🗡 Scroll
+              🗡 Projects
             </HashLink>
           </li>
           <li>
