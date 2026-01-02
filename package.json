@@ -4,9 +4,7 @@
   "private": true,
   "homepage": "https://nullgrimoire.github.io/DigitalGrimoire/",
   "dependencies": {
-    "@notionhq/client": "^4.0.0",
     "@tailwindcss/typography": "^0.5.16",
-    "marked": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.6.3",
