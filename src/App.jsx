@@ -2,8 +2,6 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import BlogHome from "./components/blog/BlogHome";
-import BlogPost from "./components/blog/BlogPost";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -47,8 +45,6 @@ function App() {
             </>
           }
         />
-        <Route path="/blog" element={<BlogHome />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
     </Router>
   );

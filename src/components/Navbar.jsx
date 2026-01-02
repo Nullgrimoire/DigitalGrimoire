@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
@@ -21,11 +20,6 @@ const Navbar = () => {
             <HashLink smooth to="/#projects" className="hover:text-white transition">
               🗡 Scroll
             </HashLink>
-          </li>
-          <li>
-            <Link to="/blog" className="hover:text-white transition">
-              📖 Codex
-            </Link>
           </li>
           <li>
             <HashLink smooth to="/#contact" className="hover:text-white transition">
